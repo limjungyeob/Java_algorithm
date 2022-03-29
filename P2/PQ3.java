@@ -13,18 +13,24 @@ public class PQ3 {
     public static void main(String[] args) {
         Scanner stdIn = new Scanner(System.in);
 
-        System.out.print("요솟수: ");
-        int num = stdIn.nextInt();
+        try {
+            System.out.print("요솟수: ");
+            int num = stdIn.nextInt();
 
-        int[] x = new int[num];
+            int[] x = new int[num];
 
-        for(int i=0; i<num;i++)
-        {
+            for(int i=0; i<num;i++){
             System.out.print("x["+i+"] : ");
             x[i]=stdIn.nextInt();
-        }
+            }
         
 
-        System.out.println("모든 배열의 요소수의 합은: "+sumOf(x));
+            System.out.println("모든 배열의 요소수의 합은: "+sumOf(x));
+        } catch (Exception e) {
+            
+        }finally{
+            stdIn.close();
+        }
+       
     }
 }

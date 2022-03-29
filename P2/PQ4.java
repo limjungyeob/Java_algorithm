@@ -15,7 +15,8 @@ public class PQ4 {
 
         Scanner stdId= new Scanner(System.in);
 
-        System.out.print("b의 요솟수는 : ");
+        try {
+            System.out.print("b의 요솟수는 : ");
 		int b_1 = stdId.nextInt(); 
 		int[] b = new int[b_1]; 
 		for (int i = 0; i < b_1; i++) {
@@ -29,5 +30,11 @@ public class PQ4 {
         for(int i=0;i<a.length;i++){
             System.out.print(a[i]);
         }
+        } catch (Exception e) {
+            
+        }finally{
+stdId.close();
+        }
+        
     }
 }

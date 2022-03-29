@@ -18,8 +18,15 @@ public class Pinput2Q9 {
     }
     public static void main(String[] args) {
         Scanner stdIn = new Scanner(System.in);
-        System.out.print("a의 값 : "); int var1 = stdIn.nextInt();
-        System.out.print("b의 값 : "); int var2 = stdIn.nextInt();
-        System.out.println("a부터 b까지의 합은:"+sumof(var1, var2));
+        try {
+            System.out.print("a의 값 : "); int var1 = stdIn.nextInt();
+            System.out.print("b의 값 : "); int var2 = stdIn.nextInt();
+            System.out.println("a부터 b까지의 합은:"+sumof(var1, var2));
+        } catch (Exception e) {
+            
+        }finally{
+            stdIn.close();
+        }
+        
     }
 }

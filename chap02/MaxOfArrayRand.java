@@ -17,21 +17,27 @@ public class MaxOfArrayRand {
     public static void main(String[] args) {
         Random rand = new Random();
         Scanner stdIn = new Scanner(System.in);
+        try {
+            System.out.println("키의 최댓값을 구합니다.");
+            System.out.print("사람수 : ");
+            int num = stdIn.nextInt();
 
-        System.out.println("키의 최댓값을 구합니다.");
-        System.out.print("사람수 : ");
-        int num = stdIn.nextInt();
+            int[] height = new int[num];
 
-        int[] height = new int[num];
+            System.out.println("키 값은 아래와 같습니다.");
 
-        System.out.println("키 값은 아래와 같습니다.");
+            for(int i=0;i<num;i++){
+                height[i] = 100+rand.nextInt(90);
+                System.out.println("height{" + i + "]:"+height[i]);
+            }
 
-        for(int i=0;i<num;i++){
-            height[i] = 100+rand.nextInt(90);
-            System.out.println("height{" + i + "]:"+height[i]);
+            System.out.println("최댓값은"+maxOf(height)+"입니다.");
+        } catch (Exception e) {
+            
+        }finally{
+            stdIn.close();
         }
-
-        System.out.println("최댓값은"+maxOf(height)+"입니다.");
+        
         
     }
 }

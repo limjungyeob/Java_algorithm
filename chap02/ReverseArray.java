@@ -16,24 +16,29 @@ public class ReverseArray {
 
     public static void main(String[] args) {
         Scanner stdIn = new Scanner(System.in);
+        try {
+            System.out.print("요솟수: ");
+            int num = stdIn.nextInt();
 
-        System.out.print("요솟수: ");
-        int num = stdIn.nextInt();
+            int[] x = new int[num];
 
-        int[] x = new int[num];
-
-        for(int i=0; i<num;i++)
-        {
+            for(int i=0; i<num;i++){
             System.out.print("x["+i+"] : ");
             x[i]=stdIn.nextInt();
+            }
+
+            reverse(x);
+
+            System.out.println("요소를 역순으로 정렬했습니다.");
+
+            for(int i=0;i<num;i++){
+                System.out.println("x["+i+"] = "+x[i]);
+            }
+        } catch (Exception e) {
+            
+        }finally{
+            stdIn.close();
         }
-
-        reverse(x);
-
-        System.out.println("요소를 역순으로 정렬했습니다.");
-
-        for(int i=0;i<num;i++){
-            System.out.println("x["+i+"] = "+x[i]);
-        }
+        
     }
 }

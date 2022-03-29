@@ -14,14 +14,21 @@ public class PQ17 {
     }
     public static void main(String[] args) {
         Scanner stdIn = new Scanner(System.in);
-    System.out.println("피라미드를 만듭니다.. ");
-    int n;
-    do{
-        System.out.print("양의 정수를 입력하세요.? : ");
-        n=stdIn.nextInt();
-    }while(n <=0);
+        try {
+            System.out.println("피라미드를 만듭니다.. ");
+            int n;
+            do{
+                System.out.print("양의 정수를 입력하세요.? : ");
+                n=stdIn.nextInt();
+            }while(n <=0);
 
-        npira(n);
+            npira(n);
+        } catch (Exception e) {
+            
+        }finally{
+            stdIn.close();
+        }
+    
 
     }
 }

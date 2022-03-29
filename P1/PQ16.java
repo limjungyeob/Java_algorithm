@@ -36,7 +36,8 @@ public class PQ16 {
     }
     public static void main(String[] args) {
         Scanner stdIn = new Scanner(System.in);
-    System.out.println("왼쪽 아래가 직각인 이등변 삼각형을 출력합니다. ");
+        try {
+            System.out.println("왼쪽 아래가 직각인 이등변 삼각형을 출력합니다. ");
     int n;
     do{
         System.out.print("몇단 삼각형입니까? : ");
@@ -46,6 +47,12 @@ public class PQ16 {
         //triangleLU(n);
         //triangleRU(n);
         triangleRB(n);
+        } catch (Exception e) {
+            
+        }finally{
+            stdIn.close();
+        }
+    
 
     }
     
