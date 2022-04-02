@@ -15,7 +15,8 @@ public class SeqSearchSen {
             i++;
         }
 
-        return i == n ? -1:i;
+        return i == n ? -1:i;      
+        //while문에 의한 반복이 완료되면 찾은 값이 배열의 원래 데이터인지 아니면 보초인지 판단 i가 n이면 값이 보초이므로 -1반환.
 
     }
 
