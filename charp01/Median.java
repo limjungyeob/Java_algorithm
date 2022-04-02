@@ -26,7 +26,7 @@ public class Median {
             System.out.print("a의 값 : "); int a = stdIn.nextInt();
             System.out.print("b의 값 : "); int b = stdIn.nextInt();
             System.out.print("c의 값 : "); int c = stdIn.nextInt();
-            System.out.println("최솟값은 : "+ med3(a,b,c));
+            System.out.println("중간값은 : "+ med3(a,b,c));
         } catch (Exception e) {
             
         }finally{
