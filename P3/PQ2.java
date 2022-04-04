@@ -8,6 +8,8 @@ public class PQ2 {
         int i=0;
 
         a[n] = key; //보초를 추가
+        
+        //위의 별찍기 전까지의 출력
         System.out.print("   |");
         for(int k=0;k<n;k++){
             System.out.print(k+" ");
@@ -16,6 +18,7 @@ public class PQ2 {
         for(int j=0;j<n;j++)
         System.out.print("--");
         System.out.println();
+
         for(;i<n;i++){
             System.out.print("   |");
             for(int j=0;j<i;j++){   //i만큼 공백 띄우기
