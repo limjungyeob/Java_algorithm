@@ -1,4 +1,4 @@
-package charp01;
+package chap01;
 
 import java.util.Scanner;
 class max03{

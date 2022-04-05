@@ -1,4 +1,4 @@
-package charp01;
+package chap01;
 
 public class Multi99 {
     public static void main(String[] args) {
