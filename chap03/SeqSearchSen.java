@@ -3,16 +3,18 @@ package chap03;
 import java.util.Scanner;
 
 public class SeqSearchSen {
+   
     static int seqSearchSen(int[] a, int n, int key){
 
         int i=0;
-
+        
         a[n] = key; //보초를 추가
 
         while(true){
             if(a[i] == key) //검색성공
                 break;
             i++;
+            
         }
 
         return i == n ? -1:i;      
@@ -44,6 +46,7 @@ public class SeqSearchSen {
                 System.out.println(ky+"는 x["+idx+"]에 있습니다.");
 
             System.out.println();
+      
         } catch (Exception e) {
             
         }finally{
