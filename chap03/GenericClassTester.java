@@ -7,7 +7,7 @@ public class GenericClassTester {
         GenericClass(T t){  //생성자
             this.xyz = t;
         }
-        T getXyz(){         //xyz를 반환하비다.
+        T getXyz(){         //xyz를 반환합니다.
             return xyz;
         }
     }
