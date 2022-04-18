@@ -81,7 +81,7 @@ public class Q3Stack {
          return -1;  //검색실패
     }
     public int indexOfB(int x){
-        for(int i=ptrB+1;i<max;i++){ //정상쪽에서 선형검색
+        for(int i=ptrB+1;i<=max-1;i++){ //정상쪽에서 선형검색
             if(stk[i] == x){
                 return i;
             }
@@ -140,7 +140,7 @@ public class Q3Stack {
         if(ptrB == max-1){
             System.out.println("스택이 비어 있습니다.");
         }else{
-            for(int i=ptrB+1; i<max-1;i++)
+            for(int i=ptrB+1; i<max;i++)
                 System.out.print(stk[i]+"");
             System.out.println();
         }

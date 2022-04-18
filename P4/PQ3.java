@@ -117,7 +117,7 @@ public class PQ3 {
                     x=stdIn.nextInt();
                     int n = s.indexOfB(x);
                     if(n >= 0){
-                        System.out.println("검색할 데이터는 "+(s.sizeB()-n)+"번째 있습니다.");
+                        System.out.println("검색할 데이터는 "+(n-s.sizeB())+"번째 있습니다.");
                     }else{
                         System.out.println("그 데이터는 없습니다.");
                     }
