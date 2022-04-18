@@ -1,14 +1,15 @@
-package chap04;
+/*
+package P4;
 
 import java.util.Scanner;
 
 import chap04.IntQueue.EmptyInQueueException;
 import chap04.IntQueue.OverflowIntQueueException;
 
-public class IntQueueTester {
+public class GenericqueueTester {
     public static void main(String[] args) {
         Scanner stdIn = new Scanner(System.in);
-        IntQueue s= new IntQueue(64);   //최대 64개를 인큐할 수 있는 큐
+        Genericqueue s= new Genericqueue(64);   //최대 64개를 인큐할 수 있는 큐
         try {
             while(true){
                 System.out.println("현재 데이터 수:"+s.size()+"/"+s.capacity());
@@ -16,7 +17,7 @@ public class IntQueueTester {
                 int menu = stdIn.nextInt();
                 if(menu == 0) break;
 
-                int x;
+                Object x;
                 switch(menu){
                     case 1: //인큐
                         System.out.print("데이터:");
@@ -30,7 +31,7 @@ public class IntQueueTester {
 
                     case 2: //디큐
                         try {
-                            x=s.deque();
+                            x=s.dequeue();
                             System.out.println("디큐한 데이터는 "+x+"입니다.");
                         } catch (EmptyInQueueException e) {
                            System.out.println("큐가 비어있습니다.");
@@ -40,7 +41,7 @@ public class IntQueueTester {
                         try {
                             x=s.peek();
                             System.out.println("피크한 데이터는 "+x+"입니다.");
-                        } catch (IntQueue.EmptyInQueueException e) {
+                        } catch (Genericqueue.EmptyGenericqueueException e) {
                             System.out.println("큐가 비어 있습니다.");
                         }
                         break;
@@ -67,4 +68,5 @@ public class IntQueueTester {
         }
     }
 }
+*/
 

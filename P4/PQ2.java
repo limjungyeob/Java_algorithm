@@ -1,10 +1,8 @@
-package P4;
+/*package P4;
 
 import java.util.Scanner;
 
 public class PQ2 {
-    private static Object push;
-
     public static void main(String[] args) {
         Scanner stdIn = new Scanner(System.in);
         GenericStack s = new GenericStack(64);  //최대 64개를 푸시할 수 있는 스택
@@ -23,7 +21,7 @@ public class PQ2 {
                 System.out.print("데이터 :");
                 x = stdIn.nextInt();
                 try {
-                    push = s.push(x);
+                    s.push(x);
                 } catch (IntStack.OverflowIntStackException e) {
                     System.out.println("스택이 가득 찼습니다.");
                 }
@@ -81,3 +79,4 @@ public class PQ2 {
         
     }
 }
+*/

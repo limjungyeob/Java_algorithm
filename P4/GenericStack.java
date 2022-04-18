@@ -18,11 +18,13 @@ public class GenericStack<T> {
     }
 
     //생성자
+    @SuppressWarnings("unchecked")
     public GenericStack(int capacity){
         ptr = 0;        //생성 시 스택은 비어 있으므로 스택 포인터 ptr값을 0으로 한다.
         max = capacity;
         try{
             stk = (T[]) new Object[max]; // 스택 본체용 배열을 생성
+           
         }catch(OutOfMemoryError e){  //생성할 수 없음
             max=0;
         }
