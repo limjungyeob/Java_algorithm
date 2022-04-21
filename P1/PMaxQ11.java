@@ -1,7 +1,7 @@
 package P1;
 import java.util.Scanner;
 
-public class PQ11 {
+public class PMaxQ11 {
     public static void main(String[] args) {
         Scanner stdIn = new Scanner(System.in);
         try {

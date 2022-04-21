@@ -1,7 +1,7 @@
 package P1;
 import java.util.Scanner;
 
-public class PQ16 {
+public class PPiramidStarQ16 {
 
     static void triangleLU(int n){
         for (int i = 1; i <= n; i++) { 				// i행 (i = 1, 2, … ,n)

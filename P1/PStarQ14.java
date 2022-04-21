@@ -1,7 +1,7 @@
 package P1;
 import java.util.Scanner;
 
-public class PQ14 {
+public class PStarQ14 {
     public static void main(String[] args) {
         Scanner stdIn = new Scanner(System.in);
 
