@@ -2,7 +2,7 @@ package P3;
 
 import java.util.Scanner;
 
-public class PQ3 {
+public class PArraySearchQ3 {
     
     static void searchIdx(int[] a,int n, int key, int[] idx){
         int count=0;

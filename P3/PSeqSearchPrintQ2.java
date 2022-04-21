@@ -2,21 +2,39 @@ package P3;
 
 import java.util.Scanner;
 
-public class PQ1 {
+public class PSeqSearchPrintQ2 {
     static int seqSearchSen(int[] a, int n, int key){
 
         int i=0;
 
         a[n] = key; //보초를 추가
+        
+        //위의 별찍기 전까지의 출력
+        System.out.print("   |");
+        for(int k=0;k<n;k++){
+            System.out.print(k+" ");
+        }
+        System.out.print("\n---+");
+        for(int j=0;j<n;j++)
+        System.out.print("--");
+        System.out.println();
 
         for(;i<n;i++){
-            if(a[i] == key)
-                break;
-        }
-
-        return i == n ? -1:i;      
-        //while문에 의한 반복이 완료되면 찾은 값이 배열의 원래 데이터인지 아니면 보초인지 판단 i가 n이면 값이 보초이므로 -1반환.
-
+            System.out.print("   |");
+            for(int j=0;j<i;j++){   //i만큼 공백 띄우기
+                System.out.print("  "); 
+            }
+            System.out.print("*\n");    //별찍고 line feedback
+            System.out.print(i+"  |");
+            
+            for(int j=0;j<n;j++){
+                System.out.print(a[j]+" ");
+            }
+            System.out.println();
+                 if(a[i] == key)
+                return i;     
+            }
+        return -1;   
     }
 
     public static void main(String[] args) {

@@ -3,7 +3,7 @@ package P3;
 import java.util.Scanner;
 
 
-public class PQ4 {
+public class PBinarySearchQ5 {
     //요솟수가 n인 배열 a에서 key와 같은 요소를 이진 검색합니다.
     static int binSearch(int[] a, int n, int key){
         int pl = 0; //검색 범위의 첫 인덱스
@@ -40,8 +40,22 @@ public class PQ4 {
             }
             System.out.println();
             if(a[pc] == key){
-               return pc;
-               
+                int idx1=pc;
+                while(a[idx1]==key){
+                    idx1--;
+                }
+                if(a[pc] == a[pc-1]||a[pc]==a[pc+1]){
+                    System.out.print("  |");
+                        for(int i=0;i<n;i++){
+                            if(i==idx1+1){
+                                System.out.print(" +");
+                            }else{
+                                System.out.print("  ");
+                            }
+                        }
+                    System.out.println();
+                }
+                return idx1+1;
             }
             else if(a[pc] < key)
                 pl = pc+1;  //검색 범위를 뒤쪽 절반으로 좁힘
@@ -75,15 +89,15 @@ public class PQ4 {
             System.out.print("검색할 값: ");    //키 값을 입력
             int ky= stdIn.nextInt();
             
-/*
+            /*test code
             int[] x = {1,3,5,7,7,7,7,8,8,9,9};
             int num=11;
             int ky=7; 
            
-*/
-             int idx = binSearch(x, num, ky);
-
+            */
             
+
+             int idx = binSearch(x, num, ky);
             if(idx == -1)
                 System.out.println("그 값의 요소가 없습니다.");
             else

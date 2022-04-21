@@ -4,7 +4,7 @@ package P3;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class PQ6 {
+public class PArcQ6 {
     public static void main(String[] args) {
         Scanner stdIn = new Scanner(System.in);
 
