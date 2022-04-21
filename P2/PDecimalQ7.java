@@ -1,7 +1,7 @@
 package P2;
 import java.util.Scanner;
 
-public class PQ7 {
+public class PDecimalQ7 {
 
 //입력 받은 10진수를 2진수~36진수로 기수 변환하여 나타냄.
 

@@ -3,7 +3,7 @@ package P2;
 import java.util.Scanner;
 
 //그 해 경과 일 수를 구함
-public class PQ11 {
+public class PClassDayOfYearQ11 {
     //각 달의 일수
     static int[][] mdays = {
         {31,28,31,30,31,30,31,31,30,31,30,31},  //평년
@@ -13,14 +13,14 @@ public class PQ11 {
     int m;  //월
     int d;  //일
    //생성자
-    PQ11(int y,int m,int d){
+    PClassDayOfYearQ11(int y,int m,int d){
             this.y = y;
             this.m = m;
             this.d = d;
 
     }
-    PQ11 after(int n){   //앞의 날짜를 반환
-        PQ11 temp = new PQ11(this.y, this.m, this.d);   //생성자를 이용하여 temp(y,m,d) 객체를 생성
+    PClassDayOfYearQ11 after(int n){   //앞의 날짜를 반환
+        PClassDayOfYearQ11 temp = new PClassDayOfYearQ11(this.y, this.m, this.d);   //생성자를 이용하여 temp(y,m,d) 객체를 생성
         if(n<0)
             return (before(-n));  //n이 0보다 작으면 before 메소드에 -n을 반환
     
@@ -49,8 +49,8 @@ public class PQ11 {
     /*
     위의 after 메소드랑 비슷하게 작동 
     */
-    PQ11 before(int n){
-        PQ11 temp = new PQ11(this.y, this.m, this.d);
+    PClassDayOfYearQ11 before(int n){
+        PClassDayOfYearQ11 temp = new PClassDayOfYearQ11(this.y, this.m, this.d);
         if(n<0)
             return (after(-n));
         //일반적인 경우 temp.d가 -가 안나오는 경우는 temp.
@@ -84,16 +84,16 @@ public class PQ11 {
                 System.out.print("년: "); int year = stdIn.nextInt(); //년
                 System.out.print("월: "); int month = stdIn.nextInt();  //월
                 System.out.print("일: "); int day = stdIn.nextInt();    //일
-                PQ11 date = new PQ11(year, month, day);
+                PClassDayOfYearQ11 date = new PClassDayOfYearQ11(year, month, day);
 
                 System.out.print("몇일 뒤,전의 날짜를 알고싶나요.");
                 int n = stdIn.nextInt();
 
-                PQ11 d1 = date.after(n);
+                PClassDayOfYearQ11 d1 = date.after(n);
 
                 System.out.printf("%d일 뒤의 날짜는 %d년 %d월 %d일입니다.",n, d1.y, d1.m, d1.d);
 
-                PQ11 d2 = date.before(n);
+                PClassDayOfYearQ11 d2 = date.before(n);
 
                 System.out.printf("%d일 전의 날짜는 %d년 %d월 %d일입니다.",n, d2.y, d2.m, d2.d);
                 

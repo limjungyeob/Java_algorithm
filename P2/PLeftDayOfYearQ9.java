@@ -3,7 +3,7 @@ package P2;
 import java.util.Scanner;
 
 //그 해 경과 일 수를 구함
-public class PQ9 {
+public class PLeftDayOfYearQ9 {
     //각 달의 일수
     static int[][] mdays = {
         {31,28,31,30,31,30,31,31,30,31,30,31},  //평년

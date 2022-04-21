@@ -2,7 +2,7 @@ package P2;
 
 import java.util.Scanner;
 
-public class PQ10 {
+public class PClassExQ10 {
 
     static final int VMAX = 21; //시력 분포(0.0에서 단위로 21개)
 

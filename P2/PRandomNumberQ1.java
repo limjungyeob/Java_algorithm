@@ -2,7 +2,7 @@ package P2;
 
 import java.util.Random;
 
-public class PQ1 {
+public class PRandomNumberQ1 {
     static int maxOf(int[] a){
         int max=a[0];
         for(int i=0;i<a.length;i++){

@@ -2,7 +2,7 @@ package P2;
 
 import java.util.Scanner;
 
-public class PQ6 {
+public class PCardConvQ6 {
         //정숫값 x를 r진수로 변환하여 배열 d에 아랫자리부터 넣어두고 자릿수를 반환합니다.
         static int cardConvR(int x, int r, char[] d){
             int digits = 0; //변환 후의 자릿수

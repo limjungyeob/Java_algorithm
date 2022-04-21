@@ -2,7 +2,7 @@ package P2;
 
 import java.util.Scanner;
 
-public class PQ3 {
+public class PAddReturnQ3 {
     static int sumOf(int[] a){
         int sum=0;
         for(int i=0; i<a.length;i++){

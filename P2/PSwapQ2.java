@@ -2,7 +2,7 @@ package P2;
 
 import java.util.Scanner;
 
-public class PQ2 {
+public class PSwapQ2 {
     static void swap(int[] a,int idx1, int idx2){
         int t = a[idx1];
         a[idx1] = a[idx2];
