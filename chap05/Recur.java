@@ -14,7 +14,7 @@ public class Recur {
         Scanner stdIn = new Scanner(System.in);
 
         try {
-            System.out.print("정수를 입력하세요: ");
+            System.out.print("정수를 입력하세요s: ");
             int x=stdIn.nextInt();
 
             recur(x);
