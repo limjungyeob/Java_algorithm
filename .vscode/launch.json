@@ -68,5 +68,14 @@
                                                                          "${fileDirname}\\${fileBasenameNoExtension}" 
                                                                          ] 
                                                                         } 
-                                                                    ] 
+                                                                    ],
+                                                                    "configurations": [
+                                                                        {
+                                                                            "type": "java",
+                                                                            "name": "Launch ArrayUclid",
+                                                                            "request": "launch",
+                                                                            "mainClass": "P5.ArrayUclid",
+                                                                            "projectName": "java_algorithm_495fc800"
+                                                                        }
+                                                                    ]
 }
