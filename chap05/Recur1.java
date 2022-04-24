@@ -2,7 +2,7 @@ package chap05;
 
 import java.util.Scanner;
 
-public class Recur {
+public class Recur1 {
     static void recur(int n){
         if(n>0){
             recur(n-1);
