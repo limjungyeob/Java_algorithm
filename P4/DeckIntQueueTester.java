@@ -47,13 +47,9 @@ public class DeckIntQueueTester {
                             System.out.print("front와 rear을 선택하세요: ");
                             a=stdIn.next();
                             if(a.equals(f)){
-                                System.out.print("데이터:");
-                                x=stdIn.nextInt();
-                                s.Frontdeque();
+                                x=s.Frontdeque();
                             }else if(a.equals(r)){
-                                System.out.print("데이터:");
-                                x=stdIn.nextInt();
-                                s.Reardeque();
+                                x=s.Reardeque();
                             }else{
                                 System.out.println("잘못 적었습니다.");
                                 break;
