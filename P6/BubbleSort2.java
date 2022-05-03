@@ -1,25 +1,28 @@
-package chap06;
+package P6;
 
 import java.util.Scanner;
 
-//버블 정렬(버전1)
-public class BubbleSort {
-    
+//버블 정렬(버전2)
+public class BubbleSort2 {
+
     //a[idx1]와 a[idx2]의 값을 바꿉니다.
     static void swap(int[] a, int idx1, int idx2){
         int t = a[idx1];
         a[idx1] = a[idx2];
         a[idx2] = t;
     }
-
-    //버블 정렬
+    
     static void bubbleSort(int[] a,int n){
-        for(int i=0; i<n-1;i++){
+        for(int i=0;i<n-1;i++){
+            int exchg = 0;              //패스의 교환 횐수를 기록합니다.
             for(int j=n-1;j>i;j--){
                 if(a[j-1]>a[j]){
                     swap(a, j-1, j);
+                    exchg++;
                 }
+                
             }
+            if(exchg ==0 ) break;   //교환이 이루어지지 않으면 종료합니다.
         }
     }
     public static void main(String[] args) {
@@ -27,14 +30,8 @@ public class BubbleSort {
 
         try {
             System.out.println("버블 정렬(버전1)");
-            System.out.print("요솟수: ");
-            int nx = stdIn.nextInt();
-            int[] x = new int[nx];
-
-            for(int i=0;i<nx;i++){
-                System.out.print("x["+i+"]: ");
-                x[i] = stdIn.nextInt();
-            }
+            int nx = 7;
+            int[] x = {22,5,11,32,120,68,70};
 
             bubbleSort(x, nx);  //배열 x를 버블 정렬합니다.
             
@@ -49,4 +46,5 @@ public class BubbleSort {
             stdIn.close();
         }
     }
+
 }
