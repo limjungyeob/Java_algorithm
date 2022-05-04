@@ -45,7 +45,7 @@ public class BubbleSortPrint {
         try {
             System.out.println("버블 정렬(버전1)");
             int nx = 7;
-            int[] x = {22,5,11,32,120,68,70};
+            int[] x = {9,1,3,4,6,7,8};
 
             bubbleSort(x, nx);  //배열 x를 버블 정렬합니다.
             

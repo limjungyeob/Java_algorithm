@@ -25,7 +25,7 @@ public class BubbleSortRever {
         Scanner stdIn = new Scanner(System.in);
 
         try {
-            System.out.println("버블 정렬(버전1)");
+            System.out.println("버블 정렬(reverse버젼)");
             int nx = 7;
             int[] x = {22,5,11,32,120,68,70};
 
