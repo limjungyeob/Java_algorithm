@@ -137,10 +137,15 @@ public class IntSetPlus1 {
     //집합 s와의 합집합을 구합니다..
     public boolean addUnion(IntSetPlus1 s){
         boolean flag= false;
-        for(int i=0;i<num;i++){
-            if(add(set[i]) == true){
-                flag =  true;
-            }
+        int idx=0;
+        if(num>s.num){
+            idx=num;
+        }else{
+            idx=s.num;
+        }
+        for(int i=0;i<idx;i++){
+            add(s.set[i]);
+            flag=true;
         }
         return flag;
     }
