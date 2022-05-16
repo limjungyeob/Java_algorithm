@@ -130,7 +130,82 @@ public class IntSetPlus1 {
             return false;
         }
     }
+    //집합을 비웁니다.
     public void clear(){
         num=0;
+    }
+    //집합 s와의 합집합을 구합니다..
+    public boolean addUnion(IntSetPlus1 s){
+        boolean flag= false;
+        for(int i=0;i<num;i++){
+            if(add(set[i]) == true){
+                flag =  true;
+            }
+        }
+        return flag;
+    }
+    //집합 s와의 교집합을 구합니다.
+    public boolean retainUnion(IntSetPlus1 s){
+        boolean flag = false;
+        for(int i=0; i<num; i++){
+            if(s.contains(set[i]) == false){
+                remove(set[i]);
+                flag= true;
+            }
+        }
+        return flag;
+    }
+    //집합s와의 차집합을 구합니다.
+    public boolean removeUnion(IntSetPlus1 s){
+        boolean flag = false;
+        for(int i=0; i<num; i++){
+            if(s.contains(set[i]) == true){
+                remove(set[i]);
+                flag = true;
+            }
+            
+        }
+        return flag;
+    }
+    //집합 s의 부분집합인지 확인합니다.
+    public boolean isSubsetOf(IntSetPlus1 s){
+        for(int i=0; i<num; i++){
+            int j=0;
+            for( ; j<s.num;j++){
+                if(set[i] == s.set[i]){
+                    break;
+                }
+            }
+            if(j == s.num){ //set[i]는 s에 포함되지 않음.
+                return false;
+            }
+        }
+        return false;
+    }
+    //집합 s의 진부분집합인지 확인합니다.
+    public boolean isProperSubsetOf(IntSetPlus1 s){
+        if(num >= s.num){   //요솟수가 s이상이면
+            return false;   //s의 진부분집합이 아님.
+        }
+        return isSubsetOf(s);
+    }
+
+    //s1과 s2의 교집합을 복사합니다.
+    public void intersectioOf(IntSetPlus1 s1, IntSetPlus1 s2){
+        clear();
+        for(int i=0; i<s1.num; i++){
+            if(s2.contains(s1.set[i])){
+                add(s1.set[i]);
+            }
+        }
+    }
+    //s1과 s2의 차집합을 복사합니다.
+    public void diffenrenceOf(IntSetPlus1 s1, IntSetPlus1 s2){
+        clear();
+        for(int i=0; i<s1.num; i++){
+            if(!s2.contains(s1.set[i])){
+                add(s1.set[i]);
+            }
+        }
     }
 }
