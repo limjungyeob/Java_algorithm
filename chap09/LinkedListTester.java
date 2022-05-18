@@ -89,7 +89,7 @@ public class LinkedListTester {
     }
 
     //메뉴 선택
-    static Menu selectMenu(){
+    static Menu SelectMenu(){
         int key;
         do{
             for(Menu m: Menu.values()){
@@ -113,7 +113,7 @@ public class LinkedListTester {
         LinkedList<Data> list = new LinkedList<Data>(); //리스트를 생성
 
         do{
-            switch(menu = selectMenu()){
+            switch(menu = SelectMenu()){
 
                 case ADD_FIRST:     //머리에 노드를 삽입
                 data =new Data();
@@ -173,6 +173,9 @@ public class LinkedListTester {
 
                 case CLEAR:         //모든 노드를 삭제
                 list.clear();
+                break;
+
+                case TERMINATE:
                 break;
 
             }
