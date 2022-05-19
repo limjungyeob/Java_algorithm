@@ -98,7 +98,7 @@ public class LinkedListTester {
                     System.out.println();
                 }
             }
-            System.out.print(":");
+            System.out.print(": ");
             key = stdIn.nextInt();
         }while(key < Menu.ADD_FIRST.ordinal() || key > Menu.TERMINATE.ordinal());
         return Menu.MenuAt(key);

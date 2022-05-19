@@ -3,20 +3,20 @@ package chap09;
 import java.util.Comparator;
 
 // 연결 리스트 클래스
-public class LinkedList<E> {
+public class LinkedList<V> {
     //노드
-    class Node<E>{
-        private E data;     //데이터(데이터를 가리킵니다.)
-        private Node<E> next;   //뒤쪽포인터(다음 노드 참조)
+    class Node<V>{
+        private V data;     //데이터(데이터를 가리킵니다.)
+        private Node<V> next;   //뒤쪽포인터(다음 노드 참조)
 
-        Node(E data, Node<E> next){
+        Node(V data, Node<V> next){
             this.data = data;
             this.next = next;
         }
 
     }
-    private Node<E> head;       //머리 노드
-    private Node<E> crnt;       //선택 노드
+    private Node<V> head;       //머리 노드
+    private Node<V> crnt;       //선택 노드
 
     //생성자
     public LinkedList(){
@@ -24,8 +24,8 @@ public class LinkedList<E> {
     }
 
     //노드검색
-    public E search(E obj, Comparator<?super E> c){
-        Node<E> ptr = head;     //현재 스캔 중인 노드
+    public V search(V obj, Comparator<?super V> c){
+        Node<V> ptr = head;     //현재 스캔 중인 노드
 
         while(ptr != null){
             if(c.compare(obj, ptr.data) == 0){  //검색 성공
@@ -38,21 +38,21 @@ public class LinkedList<E> {
     }
 
     //머리에 노드 삽입
-    public void addFirst(E obj){
-        Node<E> ptr = head;     //삽입 전의 머리 노드
-        head = crnt = new Node<E>(obj,ptr);
+    public void addFirst(V obj){
+        Node<V> ptr = head;     //삽입 전의 머리 노드
+        head = crnt = new Node<V>(obj,ptr);
     }
 
     //꼬리에 노드 삽입
-    public void addLast(E obj){
+    public void addLast(V obj){
         if(head == null){       //리스트가 비어 있으면
             addFirst(obj);      //머리에 삽입
         }else{
-            Node<E> ptr = head;
+            Node<V> ptr = head;
             while(ptr.next != null){
                 ptr = ptr.next;
             }
-            ptr.next = crnt = new Node<E>(obj,null);
+            ptr.next = crnt = new Node<V>(obj,null);
         }
     }
 
@@ -69,8 +69,8 @@ public class LinkedList<E> {
             if(head.next == null){  //노드가 하나만 있으면
                 removeFirst();      //머리 노드를 삭제
             }else{
-                Node<E> ptr = head; //스캔 중인 노드
-                Node<E> pre = head; //머리 노드를 삭제
+                Node<V> ptr = head; //스캔 중인 노드
+                Node<V> pre = head; //머리 노드를 삭제
 
                 while(ptr.next != null){
                     pre = ptr;
@@ -89,7 +89,7 @@ public class LinkedList<E> {
             if(p == head){
                 removeFirst();
             }else{
-                Node<E> ptr = head;
+                Node<V> ptr = head;
 
                 while(ptr.next != p){
                     ptr = ptr.next;
@@ -135,7 +135,7 @@ public class LinkedList<E> {
 
     //모든 노드를 출력
     public void dump(){
-        Node<E> ptr = head;
+        Node<V> ptr = head;
 
         while(ptr != null){
             System.out.println(ptr.data);
