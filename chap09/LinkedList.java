@@ -142,4 +142,32 @@ public class LinkedList<V> {
             ptr = ptr.next;
         }
     }
+    // comparator c에 의해 서로 같다고 보는 노드를 모두 삭제
+    public void purge(Comparator <?super V> c){
+        Node<V> ptr = head;
+
+        while(ptr != null){
+            int count = 0;
+            Node<V> ptr2 = ptr;
+            Node<V> pre = ptr;
+
+            while(pre.next != null){
+                ptr2 = pre.next;
+                if(c.compare(ptr.data, ptr2.data) == 0){
+                    pre.next = ptr2.next;
+                    count++;
+                }else{
+                    pre = ptr2;
+                }
+            }
+            if(count == 0){
+                ptr = ptr.next;
+            }else{
+                Node<V> temp = ptr;
+                remove(ptr);
+                ptr = temp.next;
+            }
+        }
+        crnt = head;
+    }
 }
